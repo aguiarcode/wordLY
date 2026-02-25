@@ -52,8 +52,8 @@ header {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(201,24,74,0.3);
