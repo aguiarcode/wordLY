@@ -276,6 +276,22 @@ footer {
 .footer-btn:hover  { background: rgba(201,24,74,0.14); transform: translateY(-1px); }
 .footer-btn:active { transform: scale(0.96); }
 
+/* ── Hearts layer ── */
+#hearts-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+@keyframes floatHeart {
+  0%   { transform: translateY(0)      translateX(0);        opacity: 0; }
+  10%  { opacity: var(--o); }
+  90%  { opacity: var(--o); }
+  100% { transform: translateY(-100vh) translateX(var(--dx)); opacity: 0; }
+}
+
 /* ── Animations ── */
 @keyframes pop {
   0%   { transform: scale(1); }
