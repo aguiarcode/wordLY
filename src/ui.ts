@@ -11,14 +11,6 @@ import { ANSWER } from './words';
 
 /* ── Constants ── */
 const FLIP_MS = 300;
-const WIN_LINES = [
-  'Incrível! Logo à primeira! 🌹',
-  'Fantástico! 💕',
-  'Muito bem! 🌸',
-  'Conseguiste! 💗',
-  'Por pouco, mas chegaste lá! 🌹',
-  'Ufa! Mas conseguiste! 💕',
-];
 
 const KB_ROWS = [
   ['q','w','e','r','t','y','u','i','o','p'],
@@ -154,7 +146,7 @@ function handleSubmit() {
 
     if (result.won) {
       bounceRow(rowIdx);
-      setTimeout(() => showEnd(true, rowIdx), 500);
+      setTimeout(() => showEnd(true), 500);
     } else if (result.lost) {
       setTimeout(() => showEnd(false), 400);
     }
@@ -193,13 +185,13 @@ function updateKeys(keyStates: Record<string, TileResult>) {
 }
 
 /* ── End state ── */
-function showEnd(won: boolean, rowIdx = 0) {
+function showEnd(won: boolean) {
   const banner = document.getElementById('end-banner')!;
   const msg = document.getElementById('end-msg')!;
 
   if (won) {
     banner.className = 'end-banner win';
-    msg.innerHTML = `${WIN_LINES[rowIdx]}<br>A palavra era… <strong>amo-te</strong>. Tal como eu te amo a ti! ♥`;
+    msg.innerHTML = `sim, construí um jogo inteiro só para te dizer isto. <strong>amo-te.</strong>`;
   } else {
     banner.className = 'end-banner lose';
     msg.innerHTML = `A palavra era <strong>${ANSWER.toUpperCase()}</strong> — não desanimes! 💕`;
