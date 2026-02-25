@@ -242,6 +242,40 @@ main {
 .key.present { background: var(--present); color: #fff; }
 .key.absent  { background: #b0b0b0;        color: #fff; }
 
+/* ── Footer ── */
+footer {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-top: 1px solid rgba(201,24,74,0.1);
+}
+
+.footer-name {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  background: rgba(201,24,74,0.07);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.18s, transform 0.12s;
+}
+.footer-btn:hover  { background: rgba(201,24,74,0.14); transform: translateY(-1px); }
+.footer-btn:active { transform: scale(0.96); }
+
 /* ── Animations ── */
 @keyframes pop {
   0%   { transform: scale(1); }
