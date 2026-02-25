@@ -172,6 +172,7 @@ function revealRow(
 
   row.forEach((cell, i) => {
     setTimeout(() => {
+      cell.back.textContent = cell.front.textContent;
       cell.back.className = `tile-face tile-back ${results[i]}`;
       cell.el.classList.add('revealed');
     }, i * FLIP_MS);
