@@ -215,15 +215,15 @@ main {
 .key-row { display: flex; gap: 5px; }
 
 .key {
-  height: 56px;
-  min-width: 40px;
-  padding: 0 6px;
+  height: 68px;
+  min-width: 50px;
+  padding: 0 8px;
   border: none;
   border-radius: 7px;
   background: var(--key-bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
@@ -236,7 +236,7 @@ main {
 }
 .key:hover  { filter: brightness(0.93); }
 .key:active { transform: scale(0.93); }
-.key.wide   { min-width: 62px; font-size: 0.75rem; }
+.key.wide   { min-width: 76px; font-size: 0.85rem; }
 
 .key.correct { background: var(--correct); color: #fff; }
 .key.present { background: var(--present); color: #fff; }
@@ -269,6 +269,6 @@ main {
 @media (max-width: 380px) {
   .tile { width: 54px; height: 54px; }
   .tile-face { font-size: 1.65rem; }
-  .key { height: 50px; min-width: 34px; font-size: 0.76rem; }
-  .key.wide { min-width: 54px; }
+  .key { height: 58px; min-width: 42px; font-size: 0.88rem; }
+  .key.wide { min-width: 64px; }
 }
