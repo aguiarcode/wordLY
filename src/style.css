@@ -7,7 +7,7 @@
   --border-empty:   #FFCCD5;
   --border-filled:  #FF4D6D;
   --correct:        #C9184A;
-  --present:        #FF758F;
+  --present:        #c9b458;
   --absent:         #8D8D8D;
   --text:           #1a1a1a;
   --text-muted:     #6b6b6b;
@@ -58,8 +58,6 @@ header {
   gap: 8px;
   user-select: none;
 }
-.title .ly    { color: #FF4D6D; }
-.title .heart { font-size: 1.4rem; animation: heartbeat 2s ease-in-out infinite; }
 
 /* ── Toast ── */
 #toast {
@@ -260,13 +258,6 @@ main {
   90%  { transform: translateX(-2px); }
 }
 
-@keyframes heartbeat {
-  0%,100% { transform: scale(1); }
-  14%  { transform: scale(1.28); }
-  28%  { transform: scale(1); }
-  42%  { transform: scale(1.16); }
-  56%  { transform: scale(1); }
-}
 
 @keyframes winBounce {
   0%,100% { transform: translateY(0); }
