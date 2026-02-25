@@ -186,7 +186,7 @@ function showEnd(won: boolean) {
 
   if (won) {
     banner.className = 'end-banner win';
-    msg.innerHTML = `sim, construí um jogo inteiro só para te dizer isto. <strong>amo-te.</strong>`;
+    msg.innerHTML = `eu acho que já sabias mas agora tens a certeza.`;
   } else {
     banner.className = 'end-banner lose';
     msg.innerHTML = `A palavra era <strong>${ANSWER.toUpperCase()}</strong> — não desanimes! 💕`;
