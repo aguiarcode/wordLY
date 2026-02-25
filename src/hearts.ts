@@ -11,10 +11,10 @@ function spawnHeart(layer: HTMLElement, zone: 'left' | 'right'): void {
     ? rand(1, 14)
     : rand(86, 99);
 
-  const size     = rand(10, 20);
-  const opacity  = rand(0.25, 0.55);
-  const duration = rand(8, 16);
-  const delay    = rand(0, 8);
+  const size     = rand(10, 24);
+  const opacity  = rand(0.35, 0.65);
+  const duration = rand(6, 12);
+  const delay    = rand(0, 4);
   const dx       = rand(-20, 20);
   const char     = HEARTS[Math.floor(Math.random() * HEARTS.length)];
 
@@ -35,7 +35,7 @@ function spawnHeart(layer: HTMLElement, zone: 'left' | 'right'): void {
 
   el.addEventListener('animationend', () => {
     el.remove();
-    const respawn = rand(200, 1500);
+    const respawn = rand(100, 600);
     setTimeout(() => spawnHeart(layer, zone), respawn);
   }, { once: true });
 
@@ -46,7 +46,7 @@ export function initHearts(): void {
   const layer = document.getElementById('hearts-layer');
   if (!layer) return;
 
-  // 5 left, 5 right — staggered via CSS delay already randomised in spawnHeart
-  for (let i = 0; i < 5; i++) spawnHeart(layer, 'left');
-  for (let i = 0; i < 5; i++) spawnHeart(layer, 'right');
+  // 14 left, 14 right — staggered via CSS delay already randomised in spawnHeart
+  for (let i = 0; i < 14; i++) spawnHeart(layer, 'left');
+  for (let i = 0; i < 14; i++) spawnHeart(layer, 'right');
 }

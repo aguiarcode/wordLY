@@ -47,6 +47,20 @@ header {
   z-index: 10;
 }
 
+#header-pic {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(201,24,74,0.3);
+  box-shadow: 0 2px 8px rgba(201,24,74,0.15);
+  display: block;
+}
+
 .title {
   font-family: 'Playfair Display', serif;
   font-size: 2.1rem;
