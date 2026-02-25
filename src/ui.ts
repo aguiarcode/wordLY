@@ -129,13 +129,8 @@ function handleSubmit() {
   const result = submitGuess(state);
 
   if (!result.ok) {
-    if (result.reason === 'incomplete') {
-      toast('Palavra incompleta!');
-      shakeRow(rowIdx);
-    } else {
-      toast('Palavra não encontrada!');
-      shakeRow(rowIdx);
-    }
+    toast('Palavra incompleta!');
+    shakeRow(rowIdx);
     return;
   }
 

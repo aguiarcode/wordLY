@@ -1,4 +1,4 @@
-import { ANSWER, VALID_WORDS } from './words';
+import { ANSWER } from './words';
 
 export const WORD_LEN = 5;
 export const MAX_ROWS = 6;
@@ -7,7 +7,7 @@ export type TileResult = 'correct' | 'present' | 'absent';
 
 export type SubmitResult =
   | { ok: true; letters: string[]; results: TileResult[]; won: boolean; lost: boolean }
-  | { ok: false; reason: 'incomplete' | 'unknown' };
+  | { ok: false; reason: 'incomplete' };
 
 export interface GameState {
   /** Current letters typed, per row */
@@ -55,7 +55,6 @@ export function submitGuess(state: GameState): SubmitResult {
   const letters = state.rows[state.currentRow];
   const guess = letters.join('');
 
-  if (!VALID_WORDS.has(guess)) return { ok: false, reason: 'unknown' };
 
   const results = evaluate(guess);
   state.results[state.currentRow] = results;
